@@ -1,6 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './components/app'
+import Header from './components/header'
+import Products from './components/products'
+import Cart from './components/cart'
 
-render(<App name='shopper' />, document.querySelector('main'))
+
+render(
+  <div>
+  <Header name='shopper' />
+  <Products />
+  <Cart />
+  </div>,
+  document.querySelector('main'))
 console.log('welcome to shopper')
