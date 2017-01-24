@@ -13,9 +13,17 @@ const initialState = {
     {id: 2, name: 'Bolt', price: 99.00, details: 'Unlock your door with your phone!'},
     {id: 3, name: 'Bev-Brush', price: 17.00, details: 'Secret flask in a hairbrush!'},
     {id: 4, name: 'Jonny Glow', price: 32.00, details: 'See where you pee!'}
-  ]
+  ],
+  cart: {
+    1: 1 // one item with id: 1 in cart
+  }
 }
 
+var store = redux.createStore()
+
+store.subscribe()
+
+store.dispatch()
 
 
 render (
