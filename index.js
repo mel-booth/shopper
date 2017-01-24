@@ -1,11 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
-import redux from 'redux'
+const redux = require('redux')
 
 import reducer from './reducer'
 import Header from './components/header'
 import Products from './components/products'
 import Cart from './components/cart'
+
+const main = document.querySelector('main')
+const app = document.createElement('div')
+main.appendChild(app)
 
 const initialState = {
   products: [
