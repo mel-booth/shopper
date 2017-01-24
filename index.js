@@ -7,10 +7,6 @@ import Header from './components/header'
 import Products from './components/products'
 import Cart from './components/cart'
 
-const main = document.querySelector('main')
-const app = document.createElement('div')
-main.appendChild(app)
-
 const initialState = {
   products: [
     {id: 1, name: 'Pop your Top', price: 28.00, details: 'One-handed bottle opener!'},
@@ -23,18 +19,18 @@ const initialState = {
   }
 }
 
-var store = redux.createStore()
+const store = redux.createStore(reducer, initialState)
 
-store.subscribe()
+const main = document.querySelector('main')
 
-store.dispatch()
+store.subscribe(() => {
+  const state = store.getState()
+  render (
+    <div>
+      <Header name='shopper' />
+      <Products />
+      <Cart />
+    </div>, main)
+})
 
-
-render (
-  <div>
-  <Header name='shopper' />
-  <Products />
-  <Cart />
-  </div>,
-  document.querySelector('main'))
-console.log('welcome to shopper')
+store.dispatch({type: 'INIT'})
