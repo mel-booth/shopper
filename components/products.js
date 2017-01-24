@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-class App extends Component {
+class Products extends Component {
 
   constructor (props) {
     super(props)
   }
 
   render () {
-    return <h1>Welcome to {this.props.name}</h1>
+    return <h1>Products</h1>
   }
 
 }
 
-export default App
+export default Products
